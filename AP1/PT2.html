@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EcoTour Brasil</title>
+    <style>
+        html {
+            background-color: rgb(219, 219, 219);
+        }
+
+        .Eco {
+            color: green;
+            display: inline-block;
+        }
+
+        .Brasil {
+            color: yellow;
+            display: inline-block;
+        }
+
+        h1 {
+            text-align: center;
+            margin: 1rem 0;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 100%;
+            margin: 0 auto;
+        }
+
+        h1 {
+            text-align: center;
+            margin: 1rem 0;
+        }
+
+        form {
+            background: rgb(173, 173, 173);
+            padding: 2em;
+            border-radius: 5px;
+        }
+
+        form label {
+            display: block;
+            margin-bottom: 0.5em;
+        }
+
+        form input,
+        form textarea,
+        form button {
+            width: 100%;
+            padding: 0.8em;
+            margin-bottom: 1em;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        form input:valid,
+        form textarea:valid {
+            border-color: green;
+        }
+
+        form input:invalid {
+            border-color: red;
+        }
+
+        form button {
+            background: green;
+            color: white;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1em 0;
+        }
+
+        table th,
+        table td {
+            padding: 1em;
+            text-align: left;
+            border: 1px solid #ccc;
+        }
+
+        table th {
+            background: green;
+            color: yellow;
+        }
+
+        table {
+            background: yellowgreen;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>
+            <p class="Eco">EcoTour</p>
+            <p class="Brasil">Brasil</p>
+        </h1>
+
+        <form>
+            <label for="name">Nome Completo *</label>
+            <input type="text" id="name" name="name" required minlength="3" placeholder="Digite seu nome">
+
+            <label for="email">E-mail *</label>
+            <input type="email" id="email" name="email" required placeholder="Digite seu e-mail">
+
+            <label for="phone">Telefone *</label>
+            <input type="tel" id="phone" name="phone" required pattern="\(\d{2}\) \d{4,5}-\d{4}"
+                placeholder="(XX) XXXXX-XXXX">
+
+            <label for="message">Mensagem</label>
+            <textarea id="message" name="message" rows="4" placeholder="Escreva sua mensagem"></textarea>
+
+            <button type="submit">Enviar</button>
+        </form>
+
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Pacote</th>
+                        <th>Descrição</th>
+                        <th>Preço</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Aventura na Amazônia</td>
+                        <td>Explore a floresta amazônica com guias especializados.</td>
+                        <td>R$ 2.500</td>
+                    </tr>
+                    <tr>
+                        <td>Praias do Nordeste</td>
+                        <td>Descubra as praias paradisíacas do nordeste brasileiro.</td>
+                        <td>R$ 3.200</td>
+                    </tr>
+                    <tr>
+                        <td>Serra Gaúcha</td>
+                        <td>Desfrute do clima europeu e da gastronomia local.</td>
+                        <td>R$ 1.800</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+
+</html>
