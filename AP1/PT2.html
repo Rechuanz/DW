@@ -97,6 +97,46 @@
         table {
             background: yellowgreen;
         }
+
+        @media (max-width: 900px) {
+            html {
+                font-size: 14px;
+            }
+
+            form {
+                padding: 1.5em;
+            }
+
+            table th,
+            table td {
+                padding: 0.8em;
+            }
+        }
+
+        @media (max-width: 600px) {
+            html {
+                font-size: 12px;               
+            }
+
+            .container {
+                width: 100%;
+                padding: 0 1em;
+            }
+
+            table {
+                font-size: 0.9rem;
+            }
+
+            table th,
+            table td {
+                padding: 0.5em;
+            }
+
+            table {
+                overflow-x: auto;
+                display: block;
+            }
+        }
     </style>
 </head>
 
