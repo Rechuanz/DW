@@ -1,0 +1,321 @@
+/* Importa fontes Google */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Roboto:wght@400;500&display=swap');
+
+:root {
+  --primary: #1a4d2e;
+  --secondary: #f7c873;
+  --bg: #f9f9f9;
+  --text: #222;
+  --footer-bg: #13331e;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  font-family: 'Roboto', Arial, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  margin: 0;
+  min-height: 100vh;
+  line-height: 1.6;
+}
+
+.container {
+  width: 98vw;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem 0.5rem;
+  box-sizing: border-box;
+}
+
+/* Header */
+.main-header {
+  background: var(--primary);
+  color: #fff;
+  padding: 0.5rem 0;
+}
+
+.main-header h1 {
+  margin: 0;
+  font-size: 2rem;
+  text-align: center;
+  letter-spacing: 1px;
+}
+
+nav ul {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0 0 0;
+  align-items: center;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1.1rem;
+  padding: 0.5em 1em;
+  border-radius: 4px;
+}
+
+nav a:hover,
+nav a:focus {
+  background: var(--secondary);
+  color: var(--primary);
+  outline: none;
+}
+
+/* Main */
+main {
+  margin-bottom: 2rem;
+  min-height: 60vh;
+}
+
+/* Slides/questionário */
+.questionario h2 {
+  font-size: 1.2rem;
+  margin-bottom: 1em;
+}
+
+.opcoes {
+  display: flex;
+  flex-direction: column;
+  gap: 0.7em;
+}
+
+.opcao {
+  background: var(--secondary);
+  color: var(--primary);
+  border: none;
+  border-radius: 4px;
+  padding: 0.7em 1em;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.opcao:hover,
+.opcao:focus {
+  background: #ffd700;
+  color: #222;
+  outline: none;
+}
+
+.input-outro {
+  margin-top: 0.5em;
+  padding: 0.6em;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  font-size: 1em;
+  width: 100%;
+}
+
+/* Gráfico */
+.grafico-container {
+  max-width: 500px;
+  margin: 2em auto 1em auto;
+  background: none; /* Remove o fundo branco */
+  border-radius: 0;
+  padding: 1em;
+  box-shadow: none;
+}
+
+/* Tabelas */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 1rem;
+  background: #fff;
+  margin-bottom: 1.5em;
+}
+
+th, td {
+  padding: 0.8em 0.5em;
+  text-align: center;
+  border-bottom: 1px solid #eee;
+}
+
+th {
+  background: #1a4d2e;
+  color: #fff;
+  font-weight: 700;
+  font-family: 'Montserrat', Arial, sans-serif;
+}
+
+tbody tr:nth-child(even) {
+  background: #f5f5f5;
+}
+
+tbody tr:hover {
+  background: var(--secondary);
+  color: var(--primary);
+}
+
+/* Footer geral */
+.main-footer {
+  background: var(--primary);
+  color: #fff;
+  padding: 0;
+  margin: 0;
+  border-top: 2px solid #e0e0e0;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  background: var(--primary);
+  color: #fff;
+  padding: 2rem 1rem 1rem 1rem;
+}
+
+.footer-section {
+  margin-bottom: 1rem;
+}
+
+.social-icons {
+  margin-top: 0.5em;
+}
+
+.social-icons a {
+  color: #fff;
+  margin-right: 1em;
+  font-size: 1.5em;
+  transition: color 0.2s;
+  text-decoration: none;
+}
+
+.social-icons a:last-child {
+  margin-right: 0;
+}
+
+.social-icons a:hover {
+  color: var(--secondary);
+}
+
+.copyright {
+  background: var(--footer-bg);
+  color: #fff;
+  text-align: center;
+  padding: 0.5rem;
+  font-size: 0.9rem;
+  margin-top: 0;
+  border-top: 1px solid #18402a;
+}
+
+/* Formulário de contato */
+#form-contato input,
+#form-contato button {
+  display: block;
+  width: 100%;
+  margin-bottom: 0.8em;
+  padding: 0.7em;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  font-size: 1em;
+  box-sizing: border-box;
+}
+
+#form-contato input:focus {
+  border-color: var(--secondary);
+  outline: none;
+}
+
+#form-contato input:invalid {
+  border-color: #e74c3c;
+}
+
+#form-contato button {
+  background: var(--secondary);
+  color: #222;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+#form-contato button:hover {
+  background: #ffd700;
+}
+
+.feedback-contato {
+  color: #e74c3c;
+  font-size: 0.95em;
+}
+
+/* Seção de contato destacada, sem quadro branco */
+.contato-section {
+  background: linear-gradient(120deg, #f7c873 0%, #fffbe6 100%);
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+  padding: 2em 0;
+}
+
+.contato-section .container {
+  background: none; /* Remove qualquer fundo branco */
+  box-shadow: none;
+  border-radius: 0;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+/* Responsividade */
+@media (max-width: 700px) {
+  .container {
+    width: 100vw;
+    padding: 0.5rem 0.2rem;
+  }
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 1.2rem;
+  }
+  .grafico-container {
+    padding: 0.5em;
+  }
+  table, thead, tbody, th, td, tr {
+    display: block;
+  }
+  thead tr {
+    display: none;
+  }
+  tbody td {
+    position: relative;
+    padding-left: 50%;
+    text-align: left;
+    border-bottom: 1px solid #eee;
+  }
+  tbody td:before {
+    position: absolute;
+    top: 0.8em;
+    left: 0.7em;
+    width: 45%;
+    white-space: nowrap;
+    font-weight: bold;
+    color: var(--primary);
+    font-family: 'Montserrat', Arial, sans-serif;
+  }
+  tbody td:nth-child(1):before { content: "Moeda"; }
+  tbody td:nth-child(2):before { content: "Nome"; }
+  tbody td:nth-child(3):before { content: "Valor (R$)"; }
+  tbody td:nth-child(4):before { content: "Variação (%)"; }
+}
+
+@media (min-width: 700px) {
+  nav ul {
+    flex-direction: row;
+    justify-content: center;
+  }
+  .footer-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+  }
+  .footer-section {
+    margin-bottom: 0;
+  }
+  .container {
+    width: 80vw;
+  }
+}

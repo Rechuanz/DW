@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RCN Investimentos - Análise de Perfil</title>
+    <!-- CSS principal do site -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Ícones do Font Awesome  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <!-- Scripts do questionário e validação -->
+    <script src="js/script.js" defer></script>
+    <script src="js/validacao.js" defer></script>
+</head>
+
+<body>
+
+    <!-- Header com o menu de navegação do site -->
+    <header class="main-header">
+        <div class="container">
+            <!-- Título do site -->
+            <h1 style="font-size:2rem; margin:0;">RCN Investimentos</h1>
+            <nav>
+                <ul>
+                    <!-- Menu pra navegar entre as páginas principais -->
+                    <li><a href="index.html">Análise de Perfil</a></li>
+                    <li><a href="dados-economicos.html">Dados Econômicos</a></li>
+                    <li><a href="investimentos.html">Investimentos</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <!-- Questionario -->
+        <section id="questionario-section" class="questionario">
+            <!-- O JS coloca as perguntas aqui -->
+        </section>
+
+        <!-- Depois do questionário, aparece o relatório com explicações e gráfico -->
+        <section id="relatorio-section" class="relatorio hidden">
+            <!-- explicando os tipos de investimento -->
+            <div id="explicacao-investimentos" style="margin-bottom:1em;">
+                <h3>Tipos de Investimento</h3>
+                <ul>
+                    <li><strong>Renda Fixa:</strong> Investimentos com retorno previsível, tipo CDB, Tesouro Direto.</li>
+                    <li><strong>Renda Variável:</strong> Ações, fundos imobiliários, esses que podem render mais (ou menos).</li>
+                    <li><strong>Criptomoedas:</strong> Bitcoin e afins, bem voláteis, mas podem dar bom.</li>
+                </ul>
+            </div>
+            <!-- Aqui o JS mostra o resumo das respostas do usuário -->
+            <p id="perfil-resultado"></p>
+            <!-- O gráfico só aparece aqui, depois das respostas -->
+            <div class="grafico-container" style="display:none;">
+                <canvas id="grafico-perfil"></canvas>
+            </div>
+            <!-- Espaço pra tabela de  -->
+            <div id="tabela-investimentos-container">
+                <!-- Tabela de investimentos via JS -->
+            </div>
+        </section>
+    </main>
+
+    <!-- Seção de contato agora fica acima do footer e com fundo diferente -->
+    <section class="contato-section"
+        style="background: #f7f7f7; padding: 2em 0; border-top: 1px solid #eee; border-bottom: 1px solid #eee;">
+        <div class="container" style="max-width: 500px;">
+            <h3>Contato</h3>
+            <form id="form-contato">
+                <input type="text" id="nome-contato" placeholder="Seu nome" required>
+                <input type="email" placeholder="Seu e-mail" required>
+                <button type="submit">Enviar</button>
+            </form>
+            <p id="feedback-contato" class="feedback-contato"></p>
+        </div>
+    </section>
+
+    <!-- Rodapé com infos do site, links e redes sociais -->
+    <footer class="main-footer">
+        <div class="container footer-grid">
+            <div class="footer-section">
+                <h3>Sobre Nós</h3>
+                <p>Ajudamos você a tomar as melhores decisões de investimento com base no seu perfil.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Links Úteis</h3>
+                <ul>
+                    <li><a href="#">Termos de Uso</a></li>
+                    <li><a href="#">Política de Privacidade</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Siga-nos</h3>
+                <div class="social-icons">
+                    <!-- Ícones das redes sociais -->
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+        </div>
+        <!-- Copyright básico -->
+        <div class="copyright">
+            <p>&copy; 2025 Meu Investidor. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+    <!-- Chart.js pra gerar os gráficos -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</body>
+
+</html>
